@@ -68,3 +68,83 @@ body{
 		margin-top: 0%;
 	}
 }
+
+#enf1{
+	z-index: 4;
+}
+
+#enf2{
+	z-index: 3;
+	position: absolute;
+	margin-left: 16.667%;
+}
+
+.anim-enf2{
+	animation-duration: 3s;
+	animation-name: enf2;
+}
+
+@keyframes enf2{
+	from{
+		margin-left: 16.667%;
+	}
+	to{
+		margin-left: 33.333%;
+	}
+}
+
+#enf3{
+	z-index: 2;
+	position: absolute;
+	margin-left: 16.6%;
+}
+
+.anim-enf3{
+	animation-duration: 4s;
+	animation-name: enf3;
+}
+
+@keyframes enf3{
+	from{
+		margin-left: 16.667%;
+	}
+	to{
+		margin-left: 50%;
+	}
+}
+
+#enf4{
+	z-index: 1;
+	position: absolute;
+	margin-left: 16.6%;
+}
+
+.anim-enf4{
+	animation-duration: 5s;
+	animation-name: enf4;
+}
+
+@keyframes enf4{
+	from{
+		margin-left: 16.667%;
+	}
+	to{
+		margin-left: 66.667%;
+	}
+}
+
+
+.tech-animation{
+	animation-duration: 4s;
+	animation-name: tech-anim;
+	perspective: 100px;
+}
+
+@keyframes tech-anim{
+	from{
+		transform: rotateX(0deg);
+	}
+	to{
+		transform: rotateX(360deg);
+	}
+}

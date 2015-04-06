@@ -98,7 +98,7 @@
 	</div>
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-2 col-md-offset-2">
+			<div class="col-md-2 col-md-offset-2" id="enf1">
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<h1 class="panel-title text-center"><strong>Enfoque 1</strong></h1>
@@ -111,7 +111,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-2">
+			<div class="col-md-2" id="enf2">
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<h1 class="panel-title text-center"><strong>Enfoque 2</strong></h1>
@@ -124,7 +124,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-2">
+			<div class="col-md-2" id="enf3">
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<h1 class="panel-title text-center"><strong>Enfoque 3</strong></h1>
@@ -137,7 +137,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-2">
+			<div class="col-md-2" id="enf4">
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<h1 class="panel-title text-center"><strong>Enfoque 4</strong></h1>
@@ -152,7 +152,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-8 col-md-offset-2">
+			<div class="col-md-8 col-md-offset-2" id="tech">
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<h1 class="panel-title text-center"><strong>Tecnologías</strong></h1>
@@ -175,7 +175,7 @@
 								<center>
 									<i class="fa fa-eye fa-3x"></i>
 									<p class="text-center">Tech3</p>
-								</center>
+								</center> 
 							</div>
 							<div class="col-md-1">
 								<center>
@@ -239,21 +239,40 @@
 	</div>
 
 	<script type="text/javascript">
-		var flag = true;
+		var flag1 = true;
+		var flag2 = true;
 		window.onscroll = function(){scrollEfect()};
 
 		function scrollEfect(){
 			//mision.className += " vision-anim";
 			console.log(window.pageYOffset+"");
-			if(window.pageYOffset > 25 && flag){
+			if(window.pageYOffset > 25 && flag1){
 				document.getElementById("mision").className += " mision-anim col-md-offset-2";
 				document.getElementById("vision").className = "col-md-4 vision-anim";
 				var team = document.getElementById("team");
 				team.className += " team-anim";
 				team.setAttribute("style", "margin-top: 0%");
-				flag = false;
+				flag1 = false;
 			}
-			
+			if(window.pageYOffset > 370 && flag2){
+				document.getElementById("enf2").className += " anim-enf2 col-md-2";
+				document.getElementById("enf3").className += " anim-enf3 col-md-2";
+				document.getElementById("enf4").className += " anim-enf4 col-md-2";
+				document.getElementById("tech").className += " tech-animation"
+				var interval1 = setInterval(function (){
+					document.getElementById("enf2").id = "";
+					clearInterval(interval1);
+				}, 3000);
+				var interval2 = setInterval(function (){
+					document.getElementById("enf3").id = "";
+					clearInterval(interval2);
+				}, 4000);
+				var interval3 = setInterval(function (){
+					document.getElementById("enf4").id = "";
+					clearInterval(interval3);
+				}, 5000);
+				flag2 = false;
+			}
 		}
 	</script>
 	<script src="js/bootstrap.min.js"></script>
